@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="container p-4">
-    <a href="{{route('products.create')}}" class="btn btn-primary">Add</a>
-    <table class="table">
-        <thead>
+    <a href="{{route('products.create')}}" class="btn btn-outline-primary mb-5 p-2">Create A New Product</a>
+    <table class="table border border-1 text-center shadow p-1">
+        <thead class="bg-secondary text-white">
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Name</th>
@@ -22,12 +22,12 @@
                     <td>{{$product->stock}}</td>
                     <td>{{$product->price}}</td>
                     <td>{{$product->category}}</td>
-                    <td class="d-flex">
-                        <a href="{{route('products.edit',$product)}}" class="btn btn-warning mx-1">Editar</a>
+                    <td class="d-flex justify-content-center">
+                        <a href="{{route('products.edit',$product)}}" class="btn btn-outline-info mx-1"><i class="far fa-edit"></i></a>
                         <form action="{{route('products.destroy', $product)}}" method="post" class="mx-1">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger">Eliminar</button>
+                            <button class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></button>
                         </form>
                     </td>
                 </tr>
