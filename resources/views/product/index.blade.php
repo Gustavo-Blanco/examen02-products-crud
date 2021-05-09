@@ -23,6 +23,7 @@
                     <td>{{$product->price}}</td>
                     <td>{{$product->category}}</td>
                     <td class="d-flex justify-content-center">
+                        <a href="{{route('products.show',$product)}}" class="btn mx-1 icon-material"><i class="fas fa-eye"></i></a>
                         <a href="{{route('products.edit',$product)}}" class="btn mx-1 icon-material"><i class="far fa-edit"></i></a>
                         <form action="{{route('products.destroy', $product)}}" method="post" class="mx-1">
                             @csrf

@@ -32,6 +32,14 @@
         </nav>
             @yield('content')
     </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <footer>
             <div class="shadow p-5">
                 <div class="col-md-12 text-center border-bottom">
@@ -48,6 +56,7 @@
             </div>
         </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    @stack('js')
 </body>
 
 </html>
