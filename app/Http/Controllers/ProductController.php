@@ -109,6 +109,11 @@ class ProductController extends Controller
 
     public function destroy(Product $product)
     {
+        foreach ($product->images as $image) {
+            Cloudinary::destroy($image->key);
+            $image->delete();
+        }
+
         $product->delete();
         return redirect()->route('products.index')->with('message','Product deleted successfully');
     }
