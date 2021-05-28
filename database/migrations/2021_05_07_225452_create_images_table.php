@@ -17,6 +17,7 @@ class CreateImagesTable extends Migration
             $table->id();
             $table->foreignId('product_id');
             $table->string('url');
+            $table->string('key');
             $table->timestamps();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });

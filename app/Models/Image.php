@@ -8,7 +8,7 @@ use CloudinaryLabs\CloudinaryLaravel\MediaAlly;
 class Image extends Model
 {
     use MediaAlly;
-    protected $fillable = ['product_id','url'];
+    protected $fillable = ['product_id','url','key'];
 
     
     public function product()

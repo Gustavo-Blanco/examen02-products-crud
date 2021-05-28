@@ -32,7 +32,7 @@
                 </div>
                 <div id="image-container">
                     @foreach ($product->Images as $image)
-                    <div class="my-3">
+                    <div class="my-3 images">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="w-100 ">
                                 <input class="form-control" name="files[][file]" type="file">
@@ -89,7 +89,15 @@
             `;
             document.querySelectorAll('.remove').forEach(element => element.addEventListener('click', () => element.parentElement.remove()));
         }
-        
         addIcon.addEventListener('click',addImg);
+        const inputsImages = document.querySelectorAll('.images');
+        inputsImages.forEach(inputImage => {
+            const input = inputImage.querySelector('input[type=file]');
+            input.addEventListener('change', () => {
+                
+                // console.log(input.value);
+            });
+            // console.log(input);
+        });
     </script>
 @endpush
