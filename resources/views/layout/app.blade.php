@@ -16,7 +16,7 @@
         <nav class="header-background navbar navbar-expand-lg navbar-light shadow p-2">
             <div class="container-fluid">
                 <div class="container d-flex">
-                    <a class="navbar-brand text-white" href="{{route('products.index')}}">Home</a>
+                    <a class="navbar-brand text-white" href="/home">Home</a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto">
                             {{-- <li class="nav-item">

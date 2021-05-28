@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +19,11 @@ Route::get('/', function () {
 });
 
 Route::resource('products', 'ProductController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/reset/mypassword', 'EmailController@sendEmail')->name('reset.email');
+Route::get('/reset/showform', 'EmailController@verifyToken')->name('email.token');
+Route::put('/reset/update/password/{id}','EmailController@updatePassword')->name('update.password');
